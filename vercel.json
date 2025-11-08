@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://shopwise-backend-l00p.onrender.com/api/$1"
+    }
+  ]
+}
