@@ -13,7 +13,7 @@ function ProductView(){
     useEffect(() => {
         async function getProduct(){
             try{
-                const response = await axios.get(`http://localhost:8080/api/product/${product_id}`);
+                const response = await axios.get(`/api/product/${product_id}`);
                 setProduct(response.data.data);
                 setSelectedVariant(response.data.data.variant[0]);
             }
@@ -25,7 +25,7 @@ function ProductView(){
         }
         async function getEMIdetails(){
             try{
-                const emiResponse = await axios.get(`http://localhost:8080/api/emi/${product_id}`);
+                const emiResponse = await axios.get(`/api/emi/${product_id}`);
                 setEmiPlans(emiResponse.data.data.plans);
             }
             catch(err){
